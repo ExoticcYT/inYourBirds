@@ -3,7 +3,7 @@ const World= Matter.World;
 const Bodies = Matter.Bodies;
 
 var engine, world;
-var box1, pig1, platform;
+var box1, pig1, platform, nothing;
 var backgroundImg;
 
 function preload() {
@@ -35,6 +35,7 @@ function setup(){
 
     bird = new Bird(100,100);
     platform = new Ground(150,300,300,170);
+    nothing = new Ground(150,300,300,170);
 }
 
 function draw(){
@@ -58,6 +59,7 @@ function draw(){
     log4.display();
     log5.display();
     platform.display();
+    nothing.display();
 
     bird.display();
 }
